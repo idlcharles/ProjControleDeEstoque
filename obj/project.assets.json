@@ -1,11 +1,49 @@
 {
   "version": 3,
   "targets": {
-    "net6.0-windows7.0": {}
+    "net6.0": {
+      "DAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DAL.dll": {}
+        }
+      },
+      "Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Model.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "DAL/1.0.0": {
+      "type": "project",
+      "path": "../DAL/DAL.csproj",
+      "msbuildProject": "../DAL/DAL.csproj"
+    },
+    "Model/1.0.0": {
+      "type": "project",
+      "path": "../Model/Model.csproj",
+      "msbuildProject": "../Model/Model.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0-windows7.0": []
+    "net6.0": [
+      "DAL >= 1.0.0",
+      "Model >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Charles\\.nuget\\packages\\": {},
@@ -14,11 +52,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Charles\\Desktop\\PJControleDeEstoque\\PJControleDeEstoque.csproj",
-      "projectName": "PJControleDeEstoque",
-      "projectPath": "C:\\Users\\Charles\\Desktop\\PJControleDeEstoque\\PJControleDeEstoque.csproj",
+      "projectUniqueName": "C:\\Users\\Charles\\Desktop\\BLL\\BLL.csproj",
+      "projectName": "BLL",
+      "projectPath": "C:\\Users\\Charles\\Desktop\\BLL\\BLL.csproj",
       "packagesPath": "C:\\Users\\Charles\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Charles\\Desktop\\PJControleDeEstoque\\obj\\",
+      "outputPath": "C:\\Users\\Charles\\Desktop\\BLL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -29,7 +67,7 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0-windows"
+        "net6.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -37,9 +75,16 @@
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net6.0-windows7.0": {
-          "targetAlias": "net6.0-windows",
-          "projectReferences": {}
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "C:\\Users\\Charles\\Desktop\\DAL\\DAL.csproj": {
+              "projectPath": "C:\\Users\\Charles\\Desktop\\DAL\\DAL.csproj"
+            },
+            "C:\\Users\\Charles\\Desktop\\Model\\Model.csproj": {
+              "projectPath": "C:\\Users\\Charles\\Desktop\\Model\\Model.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -49,8 +94,8 @@
       }
     },
     "frameworks": {
-      "net6.0-windows7.0": {
-        "targetAlias": "net6.0-windows",
+      "net6.0": {
+        "targetAlias": "net6.0",
         "imports": [
           "net461",
           "net462",
@@ -65,9 +110,6 @@
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
-          },
-          "Microsoft.WindowsDesktop.App.WindowsForms": {
-            "privateAssets": "none"
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"

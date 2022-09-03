@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JFKLh5LkbOxRjW8u6YgIA2PEhsggjBbQUDActUIXFEFP45h2Fy4SGCGhw1fTqKuq2SJo096aqKi6TAWLhlVBSg==",
+  "dgSpecHash": "9w7FWKEWWVQHC2PYQvAc0NUJnG7cEFh79VcsOWvmM6/P3Yh7wLWM/+oi1lxegOYDU5IddqNA97CR8WcGVdzv4w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Charles\\Desktop\\PJControleDeEstoque\\PJControleDeEstoque.csproj",
+  "projectFilePath": "C:\\Users\\Charles\\Desktop\\BLL\\BLL.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
